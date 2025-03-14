@@ -1,0 +1,94 @@
+{
+  "name": {
+    "en": "My installation"
+  },
+  "class": "airconditioning",
+  "capabilities": [
+    "measure_current",
+    "target_temperature",
+    "measure_temperature",
+    "thermostat_mode",
+    "onoff",
+    "fan_mode.speed",
+    "fan_mode.mode"
+  ],
+  "capabilitiesOptions": {
+    "fan_mode.speed": {
+          "title": {
+            "en": "Fan Speed",
+            "fr": "Vitesse de ventilation"
+          },
+          "type": "enum",
+          "values": [
+            {
+              "id": "auto",
+              "title": {
+                "en": "AUTO"
+              }
+            },
+            {
+              "id": "low",
+              "title": {
+                "en": "LOW"
+              }
+            },
+            {
+              "id": "medium",
+              "title": {
+                "en": "MEDIUM"
+              }
+            },
+            {
+              "id": "high",
+              "title": {
+                "en": "HIGH"
+              }
+            }
+          ]
+        },
+    "fan_mode.mode": {
+      "title": {
+        "en": "Fan Mode",
+        "fr" : "Sens de ventilation"
+      },
+      "type": "enum",
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off"
+          }
+        },
+        {
+          "id": "vertical",
+          "title": {
+            "en": "Vertical"
+          }
+        }
+      ]
+    }
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  }, 
+  "pair" : [
+    {
+      "id": "list_devices", 
+      "template" : "list_devices", 
+      "navigation" : {
+        "next" : "add_devices"
+      }
+    }, 
+    {
+      "id" : "add_devices",
+      "template" : "add_devices"
+    }
+  ]
+}
